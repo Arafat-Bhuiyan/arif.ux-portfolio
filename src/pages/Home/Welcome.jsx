@@ -68,52 +68,68 @@ export const Welcome = () => {
         </button>
       </div>
 
-      {/* Hero Graphics Section */}
-      <div className="relative mt-20 flex justify-center items-center">
-        <div className="w-96 h-[520px] relative">
-          <div className="w-96 h-96 left-0 top-[86px] absolute bg-sky-500/30 rounded-full border-2 border-sky-500/60" />
+      <div className="relative mt-4 h-[600px] flex justify-center items-center">
+        {/* Background Glow */}
+        <div className="absolute w-[600px] h-[600px] bg-sky-900/20 rounded-full blur-[100px] -z-10" />
+
+        {/* Profile Image - Centered */}
+        <div className="relative z-10 w-96 h-[520px] flex justify-center items-center">
+          <div className="absolute w-96 h-96 top-[60px] bg-sky-500/30 rounded-full border-2 border-sky-500/60" />
           <img
-            className="w-96 h-auto left-[38px] top-0 absolute rounded-full"
+            className="relative w-96 h-auto top-[-95px] rounded-full mask-image-gradient"
             src={arif}
+            alt="Ariful Islam"
           />
         </div>
 
-        {/* Badges - Positioned absolutely relative to the center */}
+        {/* Badges - All Absolute */}
 
         {/* Figma - Top Left */}
-        <div className="absolute top-10 left-[20%] xl:left-[30%] flex items-center gap-3 px-5 py-3 bg-white/5 backdrop-blur-md rounded-full border border-white/10 shadow-lg">
-          <img src={figma} alt="Figma" className="w-6 h-6" />
-          <span className="text-white font-unbounded text-sm">Figma</span>
+        <div className="absolute top-[10%] left-[10%] xl:left-[28%] w-48 h-14 bg-sky-500/30 rounded-full outline outline-2 outline-offset-[-2px] outline-sky-500/60 backdrop-blur-sm flex justify-center items-center gap-3 shadow-lg">
+          <img className="w-7 h-7" src={figma} alt="Figma" />
+          <span className="text-white text-xl font-normal font-unbounded">
+            Figma
+          </span>
         </div>
 
         {/* Photoshop - Top Right */}
-        <div className="absolute top-10 right-[20%] xl:right-[30%] flex items-center gap-3 px-5 py-3 bg-white/5 backdrop-blur-md rounded-full border border-white/10 shadow-lg">
-          <img src={photoshop} alt="Photoshop" className="w-6 h-6" />
-          <span className="text-white font-unbounded text-sm">Photoshop</span>
+        <div className="absolute top-[10%] right-[10%] xl:right-[28%] w-48 h-14 bg-sky-500/30 rounded-full outline outline-2 outline-offset-[-2px] outline-sky-500/60 backdrop-blur-sm flex justify-center items-center gap-3 shadow-lg">
+          <img className="w-7 h-7" src={photoshop} alt="Photoshop" />
+          <span className="text-white text-xl font-normal font-unbounded">
+            Photoshop
+          </span>
         </div>
 
-        {/* Miro - Middle Left */}
-        <div className="absolute top-40 left-[10%] xl:left-[22%] flex items-center gap-3 px-5 py-3 bg-amber-500/10 backdrop-blur-md rounded-full border border-amber-500/20 shadow-lg">
-          <img src={miro} alt="Miro" className="w-6 h-6" />
-          <span className="text-white font-unbounded text-sm">Miro</span>
+        {/* Miro - Mid Left */}
+        <div className="absolute top-[45%] left-[2%] xl:left-[20%] w-48 h-14 bg-sky-500/30 rounded-full outline outline-2 outline-offset-[-2px] outline-sky-500/60 backdrop-blur-sm flex justify-center items-center gap-3 shadow-lg border border-amber-500/20">
+          <img className="w-6 h-6" src={miro} alt="Miro" />
+          <span className="text-white text-xl font-normal font-unbounded">
+            Miro
+          </span>
         </div>
 
-        {/* Illustrator - Middle Right */}
-        <div className="absolute top-40 right-[10%] xl:right-[22%] flex items-center gap-3 px-5 py-3 bg-orange-500/10 backdrop-blur-md rounded-full border border-orange-500/20 shadow-lg">
-          <img src={illustrator} alt="Illustrator" className="w-6 h-6" />
-          <span className="text-white font-unbounded text-sm">Illustrator</span>
+        {/* Illustrator - Mid Right */}
+        <div className="absolute top-[45%] right-[2%] xl:right-[20%] w-48 h-14 bg-sky-500/30 rounded-full outline outline-2 outline-offset-[-2px] outline-sky-500/60 backdrop-blur-sm flex justify-center items-center gap-3 shadow-lg border border-orange-500/20">
+          <img className="w-6 h-6" src={illustrator} alt="Illustrator" />
+          <span className="text-white text-xl font-normal font-unbounded">
+            Illustrator
+          </span>
         </div>
 
         {/* Balsamiq - Bottom Left */}
-        <div className="absolute bottom-20 left-[15%] xl:left-[25%] flex items-center gap-3 px-5 py-3 bg-white/5 backdrop-blur-md rounded-full border border-white/10 shadow-lg">
-          <img src={balsamiq} alt="Balsamiq" className="w-6 h-6" />
-          <span className="text-white font-unbounded text-sm">Balsamiq</span>
+        <div className="absolute bottom-[15%] left-[10%] xl:left-[28%] w-48 h-14 bg-sky-500/30 rounded-full outline outline-2 outline-offset-[-2px] outline-sky-500/60 backdrop-blur-sm flex justify-center items-center gap-3 shadow-lg border border-white/10">
+          <img className="w-6 h-6" src={balsamiq} alt="Balsamiq" />
+          <span className="text-white text-xl font-normal font-unbounded">
+            Balsamiq
+          </span>
         </div>
 
         {/* Sketch - Bottom Right */}
-        <div className="absolute bottom-20 right-[15%] xl:right-[25%] flex items-center gap-3 px-5 py-3 bg-orange-400/10 backdrop-blur-md rounded-full border border-orange-400/20 shadow-lg">
-          <img src={sketch} alt="Sketch" className="w-6 h-6" />
-          <span className="text-white font-unbounded text-sm">Sketch</span>
+        <div className="absolute bottom-[15%] right-[10%] xl:right-[28%] w-48 h-14 bg-sky-500/30 rounded-full outline outline-2 outline-offset-[-2px] outline-sky-500/60 backdrop-blur-sm flex justify-center items-center gap-3 shadow-lg">
+          <img className="w-7 h-7" src={sketch} alt="Sketch" />
+          <span className="text-white text-xl font-normal font-unbounded">
+            Sketch
+          </span>
         </div>
       </div>
     </div>
