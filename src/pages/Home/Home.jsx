@@ -1,9 +1,10 @@
 import React from "react";
+import { Welcome } from "./Welcome";
 
 export const Home = () => {
   return (
     <div>
-      <h1 className="text-5xl font-bold">React & Tailwind CSS Template Project</h1>
+      <Welcome />
     </div>
   );
 };
