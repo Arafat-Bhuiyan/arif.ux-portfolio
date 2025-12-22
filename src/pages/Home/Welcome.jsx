@@ -9,19 +9,24 @@ import photoshop from "../../assets/images/photoshop.svg";
 import sketch from "../../assets/images/sketch.png";
 import balsamiq from "../../assets/images/balsamiq.png";
 import arif from "../../assets/images/arif2.png";
+import bgImg from "../../assets/images/blue-bg.png";
 
 export const Welcome = () => {
   return (
-    <div className="pt-28 pb-5">
-      {/* Welcome Section */}
-      <div className="container mx-auto flex items-center justify-center gap-2.5">
+    <div className="pb-5 relative">
+      <div
+        className="container mx-auto rounded-3xl p-8"
+        style={{ backgroundImage: `url(${bgImg})`, backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }}
+      >
+        {/* Welcome Section */}
+        <div className="flex items-center justify-center gap-2.5">
         <img src={hello} alt="" />
         <h1 className="text-white text-5xl font-semibold font-unbounded">
           Hello! I’m <span className="text-sky-500">Ariful Islam</span>
         </h1>
       </div>
-      {/* Typewriter Section */}
-      <div className="pt-5 pb-9 flex items-center justify-center gap-2.5">
+        {/* Typewriter Section */}
+        <div className="pt-5 pb-9 flex items-center justify-center gap-2.5">
         <p className="text-center text-white text-3xl font-light font-unbounded">
           A
         </p>
@@ -41,8 +46,8 @@ export const Welcome = () => {
           />
         </p>
       </div>
-      {/* Experience Section */}
-      <div className="flex items-center justify-center gap-4">
+        {/* Experience Section */}
+        <div className="flex items-center justify-center gap-4">
         <p className="text-white text-2xl font-light font-unbounded">with</p>
         <div className="px-3.5 py-1.5 bg-sky-500/30 rounded-full outline outline-2 outline-offset-[-2px] outline-white/60 inline-flex justify-center items-center gap-2.5">
           <p className="text-white text-2xl font-normal font-unbounded">
@@ -53,8 +58,8 @@ export const Welcome = () => {
           Experience
         </p>
       </div>
-      {/* Button Section */}
-      <div className="flex items-center justify-center gap-4 pt-10">
+        {/* Button Section */}
+        <div className="flex items-center justify-center gap-4 pt-10">
         <button className="w-52 h-14 bg-sky-500/30 hover:bg-sky-500 rounded-full outline outline-2 outline-offset-[-2px] outline-sky-500 backdrop-blur-sm overflow-hidden inline-flex justify-center items-center gap-2">
           <img src={download} alt="" />
           <p className="text-white text-2xl font-normal font-unbounded">
@@ -68,9 +73,9 @@ export const Welcome = () => {
         </button>
       </div>
 
-      <div className="relative mt-4 h-[600px] flex justify-center items-center">
-        {/* Background Glow */}
-        <div className="absolute w-[600px] h-[600px] bg-sky-900/20 rounded-full blur-[100px] -z-10" />
+        <div className="relative mt-4 h-[600px] flex justify-center items-center">
+          {/* Background Glow */}
+          <div className="absolute w-[600px] h-[600px] bg-sky-900/20 rounded-full blur-[100px] -z-10" />
 
         {/* Profile Image - Centered */}
         <div className="relative z-10 w-96 h-[520px] flex justify-center items-center">
@@ -132,6 +137,7 @@ export const Welcome = () => {
           </span>
         </div>
       </div>
-    </div>
+        </div>
+      </div>
   );
 };
