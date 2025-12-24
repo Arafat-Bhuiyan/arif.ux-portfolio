@@ -1,6 +1,7 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
 import Navbar from "../pages/Shared/Navbar";
+import { Footer } from "../pages/Shared/Footer";
 
 export const Layout = () => {
   return (
@@ -10,6 +11,7 @@ export const Layout = () => {
       </div>
       <div className="w-[1440px] h-48 bg-sky-950 rounded-full blur-[150px]" />
       <Outlet />
+      <Footer />
     </div>
   );
 };
