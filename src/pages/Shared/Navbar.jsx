@@ -1,5 +1,4 @@
 import logo from "../../assets/images/logo.png";
-import { NavLink } from "react-router-dom";
 
 function Navbar() {
   return (
@@ -13,80 +12,45 @@ function Navbar() {
           />
         </div>
         <div className="hidden xl:inline-flex justify-start items-center gap-6">
-          <NavLink
-            to="/"
-            end
-            className={({ isActive }) =>
-              `h-6 text-center text-xl font-unbounded leading-normal ${
-                isActive
-                  ? "text-sky-500 font-semibold underline"
-                  : "text-white font-normal hover:text-sky-500"
-              }`
-            }
+          <a
+            href="/"
+            className="p-2.5 text-center text-xl font-unbounded leading-normal text-sky-500 font-semibold border-b-2 border-sky-500 "
           >
             Home
-          </NavLink>
+          </a>
 
-          <NavLink
-            to="/projects"
-            end
-            className={({ isActive }) =>
-              `h-6 text-center text-xl font-unbounded leading-normal ${
-                isActive
-                  ? "text-sky-500 font-semibold underline"
-                  : "text-white font-normal hover:text-sky-500"
-              }`
-            }
+          <a
+            href="#projects"
+            className="p-2.5 text-center text-xl font-unbounded leading-normal text-white font-normal hover:text-sky-500"
           >
             Projects
-          </NavLink>
+          </a>
 
-          <NavLink
-            to="/about"
-            end
-            className={({ isActive }) =>
-              `h-6 text-center text-xl font-unbounded leading-normal ${
-                isActive
-                  ? "text-sky-500 font-semibold underline"
-                  : "text-white font-normal hover:text-sky-500"
-              }`
-            }
+          <a
+            href="#about"
+            className="p-2.5 text-center text-xl font-unbounded leading-normal text-white font-normal hover:text-sky-500"
           >
             About
-          </NavLink>
+          </a>
 
-          <NavLink
-            to="/services"
-            end
-            className={({ isActive }) =>
-              `h-6 text-center text-xl font-unbounded leading-normal ${
-                isActive
-                  ? "text-sky-500 font-semibold underline"
-                  : "text-white font-normal hover:text-sky-500"
-              }`
-            }
+          <a
+            href="#services"
+            className="p-2.5 text-center text-xl font-unbounded leading-normal text-white font-normal hover:text-sky-500"
           >
             Services
-          </NavLink>
+          </a>
 
-          <NavLink
-            to="/contact"
-            end
-            className={({ isActive }) =>
-              `h-6 text-center text-xl font-unbounded leading-normal ${
-                isActive
-                  ? "text-sky-500 font-semibold underline"
-                  : "text-white font-normal hover:text-sky-500"
-              }`
-            }
+          <a
+            href="#contact"
+            className="p-2.5 text-center text-xl font-unbounded leading-normal text-white font-normal hover:text-sky-500"
           >
             Contact
-          </NavLink>
+          </a>
         </div>
         <div className="w-40 h-11 flex items-center justify-center bg-sky-500 hover:bg-sky-600 rounded-[119px] overflow-hidden">
-          <div className="text-center justify-start text-white text-xl font-normal font-unbounded">
+          <button className="text-center justify-start text-white text-xl font-normal font-unbounded">
             Hire Me
-          </div>
+          </button>
         </div>
       </div>
     </div>

@@ -95,7 +95,7 @@ export const Projects = () => {
   ];
 
   return (
-    <div className="py-14 relative ">
+    <div id="projects" className="py-14 relative">
       {/* BG Image Left */}
       <div
         className="absolute left-0 top-0 w-[941px] h-[894px] z-0"

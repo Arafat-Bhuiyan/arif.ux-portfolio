@@ -30,7 +30,7 @@ export const Contact = () => {
   ];
 
   return (
-    <div className="pb-14">
+    <div id="contact" className="pb-14">
       <div className="mb-20 space-y-2">
         <p className="self-stretch text-center justify-start text-sky-500 text-5xl font-semibold font-unbounded">
           Contact Me
