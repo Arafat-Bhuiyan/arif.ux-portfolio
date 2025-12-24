@@ -1,7 +1,9 @@
 import React from "react";
 import { Welcome } from "./Welcome";
-import { About } from "../About/About";
-import { Projects } from "../Projects/Projects";
+import { About } from "./About";
+import { Projects } from "./Projects";
+import { Skills } from "./Skills";
+import { Services } from "./Services";
 
 export const Home = () => {
   return (
@@ -9,6 +11,8 @@ export const Home = () => {
       <Welcome />
       <About />
       <Projects />
+      <Skills />
+      <Services />
     </div>
   );
 };
