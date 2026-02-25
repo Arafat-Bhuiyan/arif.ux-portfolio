@@ -13,28 +13,57 @@ export const Footer = () => {
     <div className="w-full h-auto relative bg-[#002152] rounded-tl-[20px] rounded-tr-[20px]">
       <div className="flex justify-between items-center gap-40 p-20">
         <div className="inline-flex flex-col justify-start items-start gap-7">
-          <img className="" src={logo} />
+          <img
+            className="transition-transform duration-300 hover:scale-105"
+            src={logo}
+            alt="Logo"
+          />
           <div className="flex flex-col justify-start items-start gap-4">
-            <p className="text-justify justify-start text-neutral-400 text-sm font-normal font-unbounded leading-6">
+            <p className="text-justify justify-start text-neutral-400 text-sm font-normal font-unbounded leading-6 max-w-[300px]">
               Designing experiences that feel as good as they look.
             </p>
           </div>
           <div className="inline-flex justify-between items-start gap-3.5">
-            <div className="p-2 bg-white/20 rounded-full w-full flex justify-center items-center gap-8">
-              <img src={dribble} alt="Dribble" />
-            </div>
-            <div className="p-2 bg-white/20 rounded-full w-full flex justify-center items-center gap-8">
-              <img src={facebook} alt="Facebook" />
-            </div>
-            <div className="p-2 bg-white/20 rounded-full w-full flex justify-center items-center gap-8">
-              <img src={instagram} alt="Instagram" />
-            </div>
-            <div className="p-2 bg-white/20 rounded-full w-full flex justify-center items-center gap-8">
-              <img src={linkedin} alt="LinkedIn" />
-            </div>
-            <div className="p-2 bg-white/20 rounded-full w-full flex justify-center items-center gap-8">
-              <img src={behance} alt="Behance" />
-            </div>
+            <a
+              href="https://dribbble.com/arifulislam_1995"
+              target="_blank"
+              rel="noreferrer"
+              className="p-2.5 bg-white/10 hover:bg-white/20 rounded-full w-10 h-10 flex justify-center items-center transition-all duration-300 hover:scale-110"
+            >
+              <img src={dribble} alt="Dribble" className="w-5 h-5" />
+            </a>
+            <a
+              href="https://www.facebook.com/Sh0pnilll"
+              target="_blank"
+              rel="noreferrer"
+              className="p-2.5 bg-white/10 hover:bg-white/20 rounded-full w-10 h-10 flex justify-center items-center transition-all duration-300 hover:scale-110"
+            >
+              <img src={facebook} alt="Facebook" className="w-5 h-5" />
+            </a>
+            <a
+              href="https://www.instagram.com/sh0pnill_hasanigsh=MXg3eGxvamdtcWprMA=="
+              target="_blank"
+              rel="noreferrer"
+              className="p-2.5 bg-white/10 hover:bg-white/20 rounded-full w-10 h-10 flex justify-center items-center transition-all duration-300 hover:scale-110"
+            >
+              <img src={instagram} alt="Instagram" className="w-5 h-5" />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/ariful-islam95/"
+              target="_blank"
+              rel="noreferrer"
+              className="p-2.5 bg-white/10 hover:bg-white/20 rounded-full w-10 h-10 flex justify-center items-center transition-all duration-300 hover:scale-110"
+            >
+              <img src={linkedin} alt="LinkedIn" className="w-5 h-5" />
+            </a>
+            <a
+              href="https://www.behance.net/arifulislam1995"
+              target="_blank"
+              rel="noreferrer"
+              className="p-2.5 bg-white/10 hover:bg-white/20 rounded-full w-10 h-10 flex justify-center items-center transition-all duration-300 hover:scale-110"
+            >
+              <img src={behance} alt="Behance" className="w-5 h-5" />
+            </a>
           </div>
         </div>
         <div className="flex justify-start items-start gap-14">
@@ -43,35 +72,47 @@ export const Footer = () => {
               Home
             </h1>
             <div className="flex flex-col justify-center items-start gap-5">
-              <p className="text-justify justify-start text-neutral-400 text-base font-normal font-unbounded">
+              <a
+                href="#services"
+                className="text-justify justify-start text-neutral-400 text-base font-normal font-unbounded hover:text-sky-500 transition-colors duration-300"
+              >
                 Services
-              </p>
-              <p className="text-justify justify-start text-neutral-400 text-base font-normal font-unbounded">
+              </a>
+              <a
+                href="#projects"
+                className="text-justify justify-start text-neutral-400 text-base font-normal font-unbounded hover:text-sky-500 transition-colors duration-300"
+              >
                 Portfolio
-              </p>
-              <p className="text-justify justify-start text-neutral-400 text-base font-normal font-unbounded">
+              </a>
+              <a
+                href="#about"
+                className="text-justify justify-start text-neutral-400 text-base font-normal font-unbounded hover:text-sky-500 transition-colors duration-300"
+              >
                 About Us
-              </p>
-              <p className="text-justify justify-start text-neutral-400 text-base font-normal font-unbounded">
+              </a>
+              <a
+                href="#contact"
+                className="text-justify justify-start text-neutral-400 text-base font-normal font-unbounded hover:text-sky-500 transition-colors duration-300"
+              >
                 Contact
-              </p>
+              </a>
             </div>
           </div>
           <div className="inline-flex flex-col justify-center items-start gap-6">
             <h1 className="text-justify justify-start text-neutral-200 text-2xl font-bold font-unbounded">
               Services
             </h1>
-            <div className="flex flex-col justify-center items-start gap-5">
-              <p className="text-justify justify-start text-neutral-400 text-base font-normal font-unbounded">
+            <div className="flex flex-col justify-center items-start gap-5 cursor-default">
+              <p className="text-justify justify-start text-neutral-400 text-base font-normal font-unbounded hover:translate-x-1 transition-transform">
                 App Design
               </p>
-              <p className="text-justify justify-start text-neutral-400 text-base font-normal font-unbounded">
+              <p className="text-justify justify-start text-neutral-400 text-base font-normal font-unbounded hover:translate-x-1 transition-transform">
                 Web Design
               </p>
-              <p className="text-justify justify-start text-neutral-400 text-base font-normal font-unbounded">
+              <p className="text-justify justify-start text-neutral-400 text-base font-normal font-unbounded hover:translate-x-1 transition-transform">
                 Dashboard Design
               </p>
-              <p className="text-justify justify-start text-neutral-400 text-base font-normal font-unbounded">
+              <p className="text-justify justify-start text-neutral-400 text-base font-normal font-unbounded hover:translate-x-1 transition-transform">
                 Wireframe
               </p>
             </div>
@@ -81,27 +122,27 @@ export const Footer = () => {
               Contact Info
             </h1>
             <div className="flex flex-col justify-center items-start gap-5">
-              <div className="inline-flex justify-center items-center gap-2">
-                <div className="w-6 h-6 relative overflow-hidden">
-                <img src={call} alt="" />
+              <div className="inline-flex justify-center items-center gap-2 group cursor-pointer hover:translate-x-1 transition-transform">
+                <div className="w-6 h-6 relative overflow-hidden transition-transform group-hover:scale-110">
+                  <img src={call} alt="" />
                 </div>
-                <div className="justify-start text-neutral-400 text-base font-normal font-unbounded">
+                <div className="justify-start text-neutral-400 text-base font-normal font-unbounded group-hover:text-sky-400 transition-colors">
                   01757-766272
                 </div>
               </div>
-              <div className="inline-flex justify-center items-center gap-2">
-                <div className="w-6 h-6 relative overflow-hidden">
+              <div className="inline-flex justify-center items-center gap-2 group cursor-pointer hover:translate-x-1 transition-transform">
+                <div className="w-6 h-6 relative overflow-hidden transition-transform group-hover:scale-110">
                   <img src={location} alt="" />
                 </div>
-                <div className="justify-start text-neutral-400 text-base font-normal font-unbounded">
+                <div className="justify-start text-neutral-400 text-base font-normal font-unbounded group-hover:text-sky-400 transition-colors">
                   Dhaka, bangladesh
                 </div>
               </div>
-              <div className="inline-flex justify-center items-center gap-2">
-                <div className="w-6 h-6 relative overflow-hidden">
+              <div className="inline-flex justify-center items-center gap-2 group cursor-pointer hover:translate-x-1 transition-transform">
+                <div className="w-6 h-6 relative overflow-hidden transition-transform group-hover:scale-110">
                   <img src={message} alt="" />
                 </div>
-                <div className="justify-start text-neutral-400 text-base font-normal font-unbounded">
+                <div className="justify-start text-neutral-400 text-base font-normal font-unbounded group-hover:text-sky-400 transition-colors text-xs lg:text-base break-all">
                   aarifulislam19955#gmail.com
                   <br />
                   arifulislam.uiux@gmail.com

@@ -16,128 +16,137 @@ export const Welcome = () => {
     <div className="pb-5 relative">
       <div
         className="container mx-auto rounded-3xl p-8"
-        style={{ backgroundImage: `url(${bgImg})`, backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }}
+        style={{
+          backgroundImage: `url(${bgImg})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+        }}
       >
         {/* Welcome Section */}
         <div className="flex items-center justify-center gap-2.5">
-        <img src={hello} alt="" />
-        <h1 className="text-white text-5xl font-semibold font-unbounded">
-          Hello! I’m <span className="text-sky-500">Ariful Islam</span>
-        </h1>
-      </div>
+          <img src={hello} alt="" />
+          <h1 className="text-white text-5xl font-semibold font-unbounded">
+            Hello! I’m <span className="text-sky-500">Ariful Islam</span>
+          </h1>
+        </div>
         {/* Typewriter Section */}
         <div className="pt-5 pb-9 flex items-center justify-center gap-2.5">
-        <p className="text-center text-white text-3xl font-light font-unbounded">
-          A
-        </p>
-        <p className="text-center text-sky-500 text-3xl font-medium font-unbounded">
-          <Typewriter
-            words={[
-              "UI/UX Designer...",
-              "Creating Ideas...",
-              "Experimenting...",
-            ]}
-            loop={0}
-            cursor
-            cursorStyle="_"
-            typeSpeed={70}
-            deleteSpeed={50}
-            delaySpeed={1000}
-          />
-        </p>
-      </div>
-        {/* Experience Section */}
-        <div className="flex items-center justify-center gap-4">
-        <p className="text-white text-2xl font-light font-unbounded">with</p>
-        <div className="px-3.5 py-1.5 bg-sky-500/30 rounded-full outline outline-2 outline-offset-[-2px] outline-white/60 inline-flex justify-center items-center gap-2.5">
-          <p className="text-white text-2xl font-normal font-unbounded">
-            1.2+ Years
+          <p className="text-center text-white text-3xl font-light font-unbounded">
+            A
+          </p>
+          <p className="text-center text-sky-500 text-3xl font-medium font-unbounded">
+            <Typewriter
+              words={[
+                "UI/UX Designer...",
+                "Creating Ideas...",
+                "Experimenting...",
+              ]}
+              loop={0}
+              cursor
+              cursorStyle="_"
+              typeSpeed={70}
+              deleteSpeed={50}
+              delaySpeed={1000}
+            />
           </p>
         </div>
-        <p className="text-white text-2xl font-light font-unbounded">
-          Experience
-        </p>
-      </div>
+        {/* Experience Section */}
+        <div className="flex items-center justify-center gap-4">
+          <p className="text-white text-2xl font-light font-unbounded">with</p>
+          <div className="px-3.5 py-1.5 bg-sky-500/30 rounded-full outline outline-2 outline-offset-[-2px] outline-white/60 inline-flex justify-center items-center gap-2.5">
+            <p className="text-white text-2xl font-normal font-unbounded">
+              1.2+ Years
+            </p>
+          </div>
+          <p className="text-white text-2xl font-light font-unbounded">
+            Experience
+          </p>
+        </div>
         {/* Button Section */}
         <div className="flex items-center justify-center gap-4 pt-10">
-        <button className="w-52 h-14 bg-sky-500/30 hover:bg-sky-500 rounded-full outline outline-2 outline-offset-[-2px] outline-sky-500 backdrop-blur-sm overflow-hidden inline-flex justify-center items-center gap-2">
-          <img src={download} alt="" />
-          <p className="text-white text-2xl font-normal font-unbounded">
-            Resume
-          </p>
-        </button>
-        <button className="w-52 h-14 bg-sky-500 hover:bg-sky-600 rounded-full overflow-hidden inline-flex justify-center items-center gap-2">
-          <p className="text-white text-2xl font-normal font-unbounded">
-            Hire Me
-          </p>
-        </button>
-      </div>
+          <button className="group w-52 h-14 bg-sky-500/30 hover:bg-sky-500/40 rounded-full outline outline-2 outline-offset-[-2px] outline-sky-500 backdrop-blur-sm overflow-hidden inline-flex justify-center items-center gap-2 transition-all duration-300 hover:scale-105 active:scale-95">
+            <img
+              src={download}
+              alt=""
+              className="transition-transform group-hover:-translate-y-1"
+            />
+            <p className="text-white text-2xl font-normal font-unbounded">
+              Resume
+            </p>
+          </button>
+          <button className="w-52 h-14 bg-sky-500 hover:bg-sky-600 rounded-full overflow-hidden inline-flex justify-center items-center gap-2 transition-all duration-300 hover:scale-105 active:scale-95 hover:shadow-[0_0_20px_rgba(14,165,233,0.4)]">
+            <p className="text-white text-2xl font-normal font-unbounded">
+              Hire Me
+            </p>
+          </button>
+        </div>
 
         <div className="relative mt-4 h-[600px] flex justify-center items-center">
           {/* Background Glow */}
-          <div className="absolute w-[600px] h-[600px] bg-sky-900/20 rounded-full blur-[100px] -z-10" />
+          <div className="absolute w-[600px] h-[600px] bg-sky-900/20 rounded-full blur-[100px] -z-10 animate-pulse" />
 
-        {/* Profile Image - Centered */}
-        <div className="relative z-10 w-96 h-[520px] flex justify-center items-center">
-          <div className="absolute w-96 h-96 top-[60px] bg-sky-500/30 rounded-full border-2 border-sky-500/60" />
-          <img
-            className="relative w-96 h-auto top-[-95px] rounded-full mask-image-gradient"
-            src={arif}
-            alt="Ariful Islam"
-          />
-        </div>
+          {/* Profile Image - Centered */}
+          <div className="relative z-10 w-96 h-[520px] flex justify-center items-center group">
+            <div className="absolute w-96 h-96 top-[60px] bg-sky-500/30 rounded-full border-2 border-sky-500/60 transition-all duration-500 group-hover:scale-110 group-hover:bg-sky-500/40" />
+            <img
+              className="relative w-96 h-auto top-[-95px] rounded-full mask-image-gradient transition-all duration-500 group-hover:scale-[1.02] filter drop-shadow-2xl"
+              src={arif}
+              alt="Ariful Islam"
+            />
+          </div>
 
-        {/* Badges - All Absolute */}
+          {/* Badges - All Absolute */}
 
-        {/* Figma - Top Left */}
-        <div className="absolute top-[10%] left-[10%] xl:left-[28%] w-48 h-14 bg-sky-500/30 rounded-full outline outline-2 outline-offset-[-2px] outline-sky-500/60 backdrop-blur-sm flex justify-center items-center gap-3 shadow-lg">
-          <img className="w-7 h-7" src={figma} alt="Figma" />
-          <span className="text-white text-xl font-normal font-unbounded">
-            Figma
-          </span>
-        </div>
+          {/* Figma - Top Left */}
+          <div className="animate-float absolute top-[10%] left-[10%] xl:left-[28%] w-48 h-14 bg-sky-500/30 rounded-full outline outline-2 outline-offset-[-2px] outline-sky-500/60 backdrop-blur-sm flex justify-center items-center gap-3 shadow-lg transition-all duration-300 hover:scale-110 hover:bg-sky-500/50 cursor-default">
+            <img className="w-7 h-7" src={figma} alt="Figma" />
+            <span className="text-white text-xl font-normal font-unbounded">
+              Figma
+            </span>
+          </div>
 
-        {/* Photoshop - Top Right */}
-        <div className="absolute top-[10%] right-[10%] xl:right-[28%] w-48 h-14 bg-sky-500/30 rounded-full outline outline-2 outline-offset-[-2px] outline-sky-500/60 backdrop-blur-sm flex justify-center items-center gap-3 shadow-lg">
-          <img className="w-7 h-7" src={photoshop} alt="Photoshop" />
-          <span className="text-white text-xl font-normal font-unbounded">
-            Photoshop
-          </span>
-        </div>
+          {/* Photoshop - Top Right */}
+          <div className="animate-float-delayed absolute top-[10%] right-[10%] xl:right-[28%] w-48 h-14 bg-sky-500/30 rounded-full outline outline-2 outline-offset-[-2px] outline-sky-500/60 backdrop-blur-sm flex justify-center items-center gap-3 shadow-lg transition-all duration-300 hover:scale-110 hover:bg-sky-500/50 cursor-default">
+            <img className="w-7 h-7" src={photoshop} alt="Photoshop" />
+            <span className="text-white text-xl font-normal font-unbounded">
+              Photoshop
+            </span>
+          </div>
 
-        {/* Miro - Mid Left */}
-        <div className="absolute top-[45%] left-[2%] xl:left-[20%] w-48 h-14 bg-sky-500/30 rounded-full outline outline-2 outline-offset-[-2px] outline-sky-500/60 backdrop-blur-sm flex justify-center items-center gap-3 shadow-lg border border-amber-500/20">
-          <img className="w-6 h-6" src={miro} alt="Miro" />
-          <span className="text-white text-xl font-normal font-unbounded">
-            Miro
-          </span>
-        </div>
+          {/* Miro - Mid Left */}
+          <div className="animate-float-delayed absolute top-[45%] left-[2%] xl:left-[20%] w-48 h-14 bg-sky-500/30 rounded-full outline outline-2 outline-offset-[-2px] outline-sky-500/60 backdrop-blur-sm flex justify-center items-center gap-3 shadow-lg border border-amber-500/20 transition-all duration-300 hover:scale-110 hover:bg-sky-500/50 cursor-default">
+            <img className="w-6 h-6" src={miro} alt="Miro" />
+            <span className="text-white text-xl font-normal font-unbounded">
+              Miro
+            </span>
+          </div>
 
-        {/* Illustrator - Mid Right */}
-        <div className="absolute top-[45%] right-[2%] xl:right-[20%] w-48 h-14 bg-sky-500/30 rounded-full outline outline-2 outline-offset-[-2px] outline-sky-500/60 backdrop-blur-sm flex justify-center items-center gap-3 shadow-lg border border-orange-500/20">
-          <img className="w-6 h-6" src={illustrator} alt="Illustrator" />
-          <span className="text-white text-xl font-normal font-unbounded">
-            Illustrator
-          </span>
-        </div>
+          {/* Illustrator - Mid Right */}
+          <div className="animate-float absolute top-[45%] right-[2%] xl:right-[20%] w-48 h-14 bg-sky-500/30 rounded-full outline outline-2 outline-offset-[-2px] outline-sky-500/60 backdrop-blur-sm flex justify-center items-center gap-3 shadow-lg border border-orange-500/20 transition-all duration-300 hover:scale-110 hover:bg-sky-500/50 cursor-default">
+            <img className="w-6 h-6" src={illustrator} alt="Illustrator" />
+            <span className="text-white text-xl font-normal font-unbounded">
+              Illustrator
+            </span>
+          </div>
 
-        {/* Balsamiq - Bottom Left */}
-        <div className="absolute bottom-[15%] left-[10%] xl:left-[28%] w-48 h-14 bg-sky-500/30 rounded-full outline outline-2 outline-offset-[-2px] outline-sky-500/60 backdrop-blur-sm flex justify-center items-center gap-3 shadow-lg border border-white/10">
-          <img className="w-6 h-6" src={balsamiq} alt="Balsamiq" />
-          <span className="text-white text-xl font-normal font-unbounded">
-            Balsamiq
-          </span>
-        </div>
+          {/* Balsamiq - Bottom Left */}
+          <div className="animate-float absolute bottom-[15%] left-[10%] xl:left-[28%] w-48 h-14 bg-sky-500/30 rounded-full outline outline-2 outline-offset-[-2px] outline-sky-500/60 backdrop-blur-sm flex justify-center items-center gap-3 shadow-lg border border-white/10 transition-all duration-300 hover:scale-110 hover:bg-sky-500/50 cursor-default">
+            <img className="w-6 h-6" src={balsamiq} alt="Balsamiq" />
+            <span className="text-white text-xl font-normal font-unbounded">
+              Balsamiq
+            </span>
+          </div>
 
-        {/* Sketch - Bottom Right */}
-        <div className="absolute bottom-[15%] right-[10%] xl:right-[28%] w-48 h-14 bg-sky-500/30 rounded-full outline outline-2 outline-offset-[-2px] outline-sky-500/60 backdrop-blur-sm flex justify-center items-center gap-3 shadow-lg">
-          <img className="w-7 h-7" src={sketch} alt="Sketch" />
-          <span className="text-white text-xl font-normal font-unbounded">
-            Sketch
-          </span>
+          {/* Sketch - Bottom Right */}
+          <div className="animate-float-delayed absolute bottom-[15%] right-[10%] xl:right-[28%] w-48 h-14 bg-sky-500/30 rounded-full outline outline-2 outline-offset-[-2px] outline-sky-500/60 backdrop-blur-sm flex justify-center items-center gap-3 shadow-lg transition-all duration-300 hover:scale-110 hover:bg-sky-500/50 cursor-default">
+            <img className="w-7 h-7" src={sketch} alt="Sketch" />
+            <span className="text-white text-xl font-normal font-unbounded">
+              Sketch
+            </span>
+          </div>
         </div>
       </div>
-        </div>
-      </div>
+    </div>
   );
 };

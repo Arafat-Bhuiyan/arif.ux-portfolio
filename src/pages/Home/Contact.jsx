@@ -10,22 +10,27 @@ export const Contact = () => {
     {
       title: "Dribble",
       logo: dribble,
+      link: "https://dribbble.com/arifulislam_1995",
     },
     {
       title: "Facebook",
       logo: facebook,
+      link: "https://www.facebook.com/Sh0pnilll",
     },
     {
       title: "Instagram",
       logo: instagram,
+      link: "https://www.instagram.com/sh0pnill_hasanigsh=MXg3eGxvamdtcWprMA==",
     },
     {
       title: "LinkedIn",
       logo: linkedin,
+      link: "https://www.linkedin.com/in/ariful-islam95/",
     },
     {
       title: "Behance",
       logo: behance,
+      link: "https://www.behance.net/arifulislam1995",
     },
   ];
 
@@ -43,17 +48,24 @@ export const Contact = () => {
       {/* Social Media Links */}
       <div className="flex items-center justify-between max-w-7xl mx-auto">
         {socialLinks.map((item, index) => (
-          <div
+          <a
             key={index}
-            className="w-52 h-14 relative bg-sky-500/30 rounded-[120px] shadow-[0px_5px_40px_0px_rgba(0,0,0,0.25)] outline outline-2 outline-offset-[-2px] outline-sky-500 backdrop-blur-[6px] overflow-hidden"
+            href={item.link}
+            target="_blank"
+            rel="noreferrer"
+            className="w-52 h-14 relative bg-sky-500/30 rounded-[120px] shadow-[0px_5px_40px_0px_rgba(0,0,0,0.15)] outline outline-2 outline-offset-[-2px] outline-sky-500/60 backdrop-blur-[6px] transition-all duration-300 hover:scale-105 hover:bg-sky-500/50 hover:shadow-[0px_10px_50px_0px_rgba(0,0,0,0.3)] cursor-pointer group"
           >
             <div className="w-full h-full flex justify-center items-center gap-2.5">
-              <img src={item.logo} alt={item.title} />
-              <div className="text-center justify-start text-white text-xl font-normal font-['Unbounded']">
+              <img
+                src={item.logo}
+                alt={item.title}
+                className="transition-transform duration-300 group-hover:rotate-12 group-hover:scale-110"
+              />
+              <div className="text-center justify-start text-white text-xl font-normal font-unbounded transition-colors duration-300 group-hover:text-white">
                 {item.title}
               </div>
             </div>
-          </div>
+          </a>
         ))}
       </div>
       <div className="flex flex-col items-center relative">
@@ -61,7 +73,7 @@ export const Contact = () => {
           Or
         </p>
         <div
-          className="absolute left-0 top-0 w-[941px] h-[894px] z-0"
+          className="absolute left-0 top-0 w-[941px] h-[894px] z-0 opacity-40"
           style={{
             backgroundImage: `url(${bgImg})`,
             backgroundRepeat: "no-repeat",
@@ -75,22 +87,22 @@ export const Contact = () => {
             <input
               type="text"
               placeholder="Name"
-              className="w-1/2 px-6 py-3.5 rounded-lg outline outline-1 outline-offset-[-1px] outline-white bg-transparent text-white text-base font-medium font-['Unbounded'] capitalize leading-6 tracking-wide placeholder:text-white"
+              className="w-1/2 px-6 py-4 rounded-xl border border-white/20 bg-white/5 backdrop-blur-sm text-white text-base font-medium font-unbounded focus:outline-none focus:border-sky-500 focus:bg-white/10 transition-all duration-300 placeholder:text-white/60"
             />
             <input
               type="email"
               placeholder="Email"
-              className="w-1/2 px-6 py-3.5 rounded-lg outline outline-1 outline-offset-[-1px] outline-white bg-transparent text-white text-base font-medium font-['Unbounded'] capitalize leading-6 tracking-wide placeholder:text-white"
+              className="w-1/2 px-6 py-4 rounded-xl border border-white/20 bg-white/5 backdrop-blur-sm text-white text-base font-medium font-unbounded focus:outline-none focus:border-sky-500 focus:bg-white/10 transition-all duration-300 placeholder:text-white/60"
             />
           </div>
           <div className="self-stretch flex justify-start items-start gap-7">
             <textarea
               placeholder="Project Details..."
-              className="w-full h-40 px-6 py-3.5 rounded-lg outline outline-1 outline-offset-[-1px] outline-white bg-transparent text-white text-base font-medium font-['Unbounded'] capitalize leading-6 tracking-wide placeholder:text-white resize-none"
+              className="w-full h-40 px-6 py-4 rounded-xl border border-white/20 bg-white/5 backdrop-blur-sm text-white text-base font-medium font-unbounded focus:outline-none focus:border-sky-500 focus:bg-white/10 transition-all duration-300 placeholder:text-white/60 resize-none"
             />
           </div>
           <div className="self-stretch flex flex-col justify-center items-end gap-2.5">
-            <button className="w-56 px-7 py-3.5 bg-sky-500 rounded-[80px] shadow-[inset_0px_-7px_8px_0px_rgba(0,0,0,0.10)] inline-flex justify-center items-center gap-2 text-center text-white text-base font-bold font-['Unbounded']">
+            <button className="w-56 px-7 py-4 bg-sky-500 hover:bg-sky-400 rounded-[80px] shadow-lg hover:shadow-sky-500/40 hover:scale-105 active:scale-95 transition-all duration-300 text-center text-white text-base font-bold font-unbounded">
               Send
             </button>
           </div>

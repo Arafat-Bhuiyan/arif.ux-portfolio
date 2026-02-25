@@ -16,16 +16,50 @@ export const Skills = () => {
           Mastery is earned, never given.{" "}
         </p>
       </div>
-      <div className="flex items-center justify-between max-w-7xl mx-auto">
-        <img src={figma} alt="Figma" />
-        <img src={ap} alt="Adobe Photoshop" />
-        <img src={xd} alt="Adobe XD" />
-        <img src={ps} alt="Adobe Photoshop" />
-        <img src={ai} alt="Adobe Illustrator" />
+      <div className="flex items-center justify-between max-w-7xl mx-auto px-10">
+        <div className="group relative">
+          <img
+            src={figma}
+            alt="Figma"
+            className="transition-all duration-300 hover:scale-110 hover:-translate-y-2 cursor-pointer drop-shadow-md hover:drop-shadow-xl"
+          />
+        </div>
+        <div className="group relative">
+          <img
+            src={ap}
+            alt="Adobe Photoshop"
+            className="transition-all duration-300 hover:scale-110 hover:-translate-y-2 cursor-pointer drop-shadow-md hover:drop-shadow-xl"
+          />
+        </div>
+        <div className="group relative">
+          <img
+            src={xd}
+            alt="Adobe XD"
+            className="transition-all duration-300 hover:scale-110 hover:-translate-y-2 cursor-pointer drop-shadow-md hover:drop-shadow-xl"
+          />
+        </div>
+        <div className="group relative">
+          <img
+            src={ps}
+            alt="Adobe Photoshop"
+            className="transition-all duration-300 hover:scale-110 hover:-translate-y-2 cursor-pointer drop-shadow-md hover:drop-shadow-xl"
+          />
+        </div>
+        <div className="group relative">
+          <img
+            src={ai}
+            alt="Adobe Illustrator"
+            className="transition-all duration-300 hover:scale-110 hover:-translate-y-2 cursor-pointer drop-shadow-md hover:drop-shadow-xl"
+          />
+        </div>
       </div>
 
       <div className="flex items-center justify-center">
-        <img src={skillsBg} alt="Skills Background" className="w-[1181px] h-[439px]"/>
+        <img
+          src={skillsBg}
+          alt="Skills Background"
+          className="w-[1181px] h-[439px]"
+        />
       </div>
     </div>
   );

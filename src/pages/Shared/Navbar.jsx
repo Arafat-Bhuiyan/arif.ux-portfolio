@@ -13,42 +13,42 @@ function Navbar() {
         </div>
         <div className="hidden xl:inline-flex justify-start items-center gap-6">
           <a
-            href="/"
-            className="p-2.5 text-center text-xl font-unbounded leading-normal text-sky-500 font-semibold border-b-2 border-sky-500 "
+            href="#"
+            className="p-2.5 text-center text-xl font-unbounded leading-normal text-sky-500 font-semibold border-b-2 border-sky-500 transition-all duration-300"
           >
             Home
           </a>
 
           <a
             href="#projects"
-            className="p-2.5 text-center text-xl font-unbounded leading-normal text-white font-normal hover:text-sky-500"
+            className="p-2.5 text-center text-xl font-unbounded leading-normal text-white font-normal hover:text-sky-500 transition-all duration-300 hover:-translate-y-0.5"
           >
             Projects
           </a>
 
           <a
             href="#about"
-            className="p-2.5 text-center text-xl font-unbounded leading-normal text-white font-normal hover:text-sky-500"
+            className="p-2.5 text-center text-xl font-unbounded leading-normal text-white font-normal hover:text-sky-500 transition-all duration-300 hover:-translate-y-0.5"
           >
             About
           </a>
 
           <a
             href="#services"
-            className="p-2.5 text-center text-xl font-unbounded leading-normal text-white font-normal hover:text-sky-500"
+            className="p-2.5 text-center text-xl font-unbounded leading-normal text-white font-normal hover:text-sky-500 transition-all duration-300 hover:-translate-y-0.5"
           >
             Services
           </a>
 
           <a
             href="#contact"
-            className="p-2.5 text-center text-xl font-unbounded leading-normal text-white font-normal hover:text-sky-500"
+            className="p-2.5 text-center text-xl font-unbounded leading-normal text-white font-normal hover:text-sky-500 transition-all duration-300 hover:-translate-y-0.5"
           >
             Contact
           </a>
         </div>
-        <div className="w-40 h-11 flex items-center justify-center bg-sky-500 hover:bg-sky-600 rounded-[119px] overflow-hidden">
-          <button className="text-center justify-start text-white text-xl font-normal font-unbounded">
+        <div className="w-40 h-11 flex items-center justify-center bg-sky-500 hover:bg-sky-600 rounded-[119px] overflow-hidden transition-all duration-300 hover:scale-105 active:scale-95 group">
+          <button className="w-full h-full text-center justify-start text-white text-xl font-normal font-unbounded">
             Hire Me
           </button>
         </div>

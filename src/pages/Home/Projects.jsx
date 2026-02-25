@@ -127,24 +127,24 @@ export const Projects = () => {
             {projects.slice(0, visibleCount).map((project, idx) => (
               <div
                 key={project.id}
-                className="relative w-full h-[28rem] rounded-[50px] shadow-[0px_5px_40px_0px_rgba(0,0,0,0.25)] overflow-hidden z-10"
+                className="group relative w-full h-[28rem] rounded-[50px] shadow-[0px_5px_40px_0px_rgba(0,0,0,0.25)] overflow-hidden z-10 transition-all duration-500 hover:scale-[1.015] hover:shadow-[0px_20px_60px_0px_rgba(0,0,0,0.3)]"
               >
                 {/* Background Image */}
-                <div className="absolute inset-0 z-0" />
+                <div className="absolute inset-0 z-0 bg-black/5 group-hover:bg-black/0 transition-colors duration-500" />
                 {/* Overlay Color/Gradient */}
                 <div
-                  className={`absolute inset-0 z-0 ${project.containerBg}`}
+                  className={`absolute inset-0 z-0 transition-opacity duration-500 ${project.containerBg}`}
                 />
 
                 {/* Content */}
                 <div className="relative z-10 w-full h-full px-6 py-6 inline-flex flex-col justify-start items-start gap-2.5">
-                  <div className="w-full inline-flex justify-start items-center gap-20">
+                  <div className="w-full h-full inline-flex justify-start items-center gap-20">
                     {/* Left Image */}
-                    <div className="w-1/2 h-[404px] rounded-[75px] overflow-hidden">
+                    <div className="w-1/2 h-full rounded-[75px] overflow-hidden">
                       <img
                         src={innerCards[project.id - 1]}
                         alt={project.title}
-                        className="w-full h-full object-cover"
+                        className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110"
                       />
                     </div>
 
@@ -155,7 +155,7 @@ export const Projects = () => {
                           <div className="self-stretch flex flex-col justify-start items-start gap-5">
                             <div className="flex flex-col justify-start items-start gap-5">
                               <p
-                                className={`justify-start text-4xl font-medium font-unbounded ${project.titleColor}`}
+                                className={`justify-start text-4xl font-medium font-unbounded transition-all duration-500 group-hover:translate-x-2 ${project.titleColor}`}
                               >
                                 {project.title}
                               </p>
@@ -164,12 +164,12 @@ export const Projects = () => {
                               </p>
                             </div>
                             <div className="self-stretch inline-flex justify-start items-center gap-3.5">
-                              <div className="w-36 h-12 relative bg-sky-500/30 rounded-[75px] outline outline-2 outline-offset-[-2px] outline-sky-500/60 overflow-hidden">
+                              <div className="w-36 h-12 relative bg-sky-500/30 rounded-[75px] outline outline-2 outline-offset-[-2px] outline-sky-500/60 overflow-hidden transition-all duration-300 hover:bg-sky-500/50">
                                 <div className="w-full h-full flex items-center justify-center text-white text-base font-normal font-unbounded">
                                   Website
                                 </div>
                               </div>
-                              <div className="w-48 h-12 relative bg-sky-500/30 rounded-[75px] outline outline-2 outline-offset-[-2px] outline-sky-500/60 overflow-hidden">
+                              <div className="w-48 h-12 relative bg-sky-500/30 rounded-[75px] outline outline-2 outline-offset-[-2px] outline-sky-500/60 overflow-hidden transition-all duration-300 hover:bg-sky-500/50">
                                 <div className="w-full h-full flex items-center justify-center text-white text-base font-normal font-unbounded">
                                   Admin Panel
                                 </div>
@@ -181,7 +181,7 @@ export const Projects = () => {
                           </h1>
                         </div>
                         <div className="self-stretch inline-flex justify-start items-center gap-2.5">
-                          <div className="w-36 h-11 relative bg-white rounded-[120px] overflow-hidden">
+                          <div className="w-36 h-11 relative bg-white rounded-[120px] overflow-hidden transition-transform duration-300 hover:-translate-y-1">
                             <div className="left-[17px] top-[10px] absolute inline-flex justify-start items-center gap-[5px]">
                               <img src={figma} alt="" />
                               <p className="text-center justify-start text-black text-base font-normal font-unbounded">
@@ -189,7 +189,7 @@ export const Projects = () => {
                               </p>
                             </div>
                           </div>
-                          <div className="w-36 h-11 relative bg-white rounded-[120px] overflow-hidden">
+                          <div className="w-36 h-11 relative bg-white rounded-[120px] overflow-hidden transition-transform duration-300 hover:-translate-y-1">
                             <div className="left-[28px] top-[10px] absolute inline-flex justify-start items-center gap-[5px]">
                               <img src={miro} alt="" />
                               <p className="text-center justify-start text-black text-base font-normal font-unbounded">
@@ -197,7 +197,7 @@ export const Projects = () => {
                               </p>
                             </div>
                           </div>
-                          <div className="w-36 h-11 relative bg-white rounded-[120px] overflow-hidden">
+                          <div className="w-36 h-11 relative bg-white rounded-[120px] overflow-hidden transition-transform duration-300 hover:-translate-y-1">
                             <div className="left-[15px] top-[10px] absolute inline-flex justify-start items-center gap-[5px]">
                               <img src={photoshop} alt="" />
                               <p className="text-center justify-start text-black text-xs font-normal font-unbounded">
@@ -207,9 +207,13 @@ export const Projects = () => {
                           </div>
                         </div>
                       </div>
-                      <div className="w-[439px] self-stretch h-16 relative bg-sky-500 rounded-[119px] shadow-[0px_0px_40px_0px_rgba(0,0,0,0.25)] overflow-hidden">
-                        <div className="left-[109px] top-[19px] absolute inline-flex justify-start items-center gap-2.5">
-                          <Link size={28} color="#ffffff" />
+                      <div className="w-[439px] self-stretch h-16 relative bg-sky-500 rounded-[119px] shadow-[0px_0px_40px_0px_rgba(0,0,0,0.25)] overflow-hidden transition-all duration-300 hover:bg-sky-400 hover:scale-[1.02] cursor-pointer group/btn">
+                        <div className="left-[109px] top-[19px] absolute inline-flex justify-start items-center gap-2.5 transition-transform duration-300 group-hover/btn:translate-x-1">
+                          <Link
+                            size={28}
+                            color="#ffffff"
+                            className="transition-transform duration-300 group-hover/btn:rotate-12"
+                          />
                           <div className="text-center justify-start text-white text-2xl font-normal font-unbounded">
                             Go to Design
                           </div>
