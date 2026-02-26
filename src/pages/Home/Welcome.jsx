@@ -8,7 +8,7 @@ import miro from "../../assets/images/miro.svg";
 import photoshop from "../../assets/images/photoshop.svg";
 import sketch from "../../assets/images/sketch.png";
 import balsamiq from "../../assets/images/balsamiq.png";
-import arif from "../../assets/images/arif2.png";
+import arif from "../../assets/images/arif.png";
 import bgImg from "../../assets/images/blue-bg.png";
 
 export const Welcome = () => {
