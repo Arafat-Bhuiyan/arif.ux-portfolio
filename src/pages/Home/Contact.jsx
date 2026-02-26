@@ -35,45 +35,49 @@ export const Contact = () => {
   ];
 
   return (
-    <div id="contact" className="pb-14">
-      <div className="mb-20 space-y-2">
-        <p className="self-stretch text-center justify-start text-sky-500 text-5xl font-semibold font-unbounded">
+    <div id="contact" className="pt-10 md:pt-20 pb-14 px-4 overflow-x-hidden">
+      {/* Header Section */}
+      <div className="mb-12 md:mb-20 space-y-2">
+        <p className="text-center text-sky-500 text-3xl sm:text-4xl md:text-5xl font-semibold font-unbounded uppercase tracking-tight">
           Contact Me
         </p>
-        <p className="text-center justify-start text-white text-2xl font-light font-unbounded">
+        <p className="text-center text-white text-base sm:text-xl md:text-2xl font-light font-unbounded px-4 max-w-2xl mx-auto">
           Reach Out and Connect with Me
         </p>
       </div>
 
-      {/* Social Media Links */}
-      <div className="flex items-center justify-between max-w-7xl mx-auto">
+      {/* Social Media Links - Responsive Flex Wrap */}
+      <div className="flex flex-wrap items-center justify-center gap-4 md:gap-6 lg:justify-between max-w-7xl mx-auto mb-16">
         {socialLinks.map((item, index) => (
           <a
             key={index}
             href={item.link}
             target="_blank"
             rel="noreferrer"
-            className="w-52 h-14 relative bg-sky-500/30 rounded-[120px] shadow-[0px_5px_40px_0px_rgba(0,0,0,0.15)] outline outline-2 outline-offset-[-2px] outline-sky-500/60 backdrop-blur-[6px] transition-all duration-300 hover:scale-105 hover:bg-sky-500/50 hover:shadow-[0px_10px_50px_0px_rgba(0,0,0,0.3)] cursor-pointer group"
+            className="w-full sm:w-52 h-14 relative bg-sky-500/10 sm:bg-sky-500/30 rounded-[120px] shadow-[0px_5px_40px_0px_rgba(0,0,0,0.15)] outline outline-2 outline-offset-[-2px] outline-sky-500/60 backdrop-blur-[6px] transition-all duration-300 hover:scale-105 hover:bg-sky-500/50 cursor-pointer group"
           >
             <div className="w-full h-full flex justify-center items-center gap-2.5">
               <img
                 src={item.logo}
                 alt={item.title}
-                className="transition-transform duration-300 group-hover:rotate-12 group-hover:scale-110"
+                className="w-5 h-5 sm:w-auto transition-transform duration-300 group-hover:rotate-12"
               />
-              <div className="text-center justify-start text-white text-xl font-normal font-unbounded transition-colors duration-300 group-hover:text-white">
+              <div className="text-center text-white text-base sm:text-lg lg:text-xl font-normal font-unbounded">
                 {item.title}
               </div>
             </div>
           </a>
         ))}
       </div>
+
       <div className="flex flex-col items-center relative">
-        <p className="self-stretch text-center justify-start text-sky-500 text-5xl font-semibold font-unbounded py-9">
+        <p className="text-center text-sky-500 text-3xl sm:text-4xl md:text-5xl font-semibold font-unbounded py-6 md:py-9 z-10">
           Or
         </p>
+
+        {/* Background Decorative Image - Responsive fit */}
         <div
-          className="absolute left-0 top-0 w-[941px] h-[894px] z-0 opacity-40"
+          className="absolute inset-0 w-full h-full z-0 opacity-20 md:opacity-40 pointer-events-none"
           style={{
             backgroundImage: `url(${bgImg})`,
             backgroundRepeat: "no-repeat",
@@ -81,28 +85,29 @@ export const Contact = () => {
             backgroundPosition: "left center",
           }}
         />
-        {/* Contact Form */}
-        <form className="w-7/12 flex flex-col justify-start items-start gap-16 z-10">
-          <div className="self-stretch flex justify-start items-center gap-7">
+
+        {/* Contact Form - Responsive container */}
+        <form className="w-full md:w-10/12 lg:w-8/12 xl:w-7/12 flex flex-col gap-8 md:gap-12 lg:gap-16 z-10 px-2 sm:px-4">
+          <div className="flex flex-col md:flex-row gap-6 md:gap-7">
             <input
               type="text"
               placeholder="Name"
-              className="w-1/2 px-6 py-4 rounded-xl border border-white/20 bg-white/5 backdrop-blur-sm text-white text-base font-medium font-unbounded focus:outline-none focus:border-sky-500 focus:bg-white/10 transition-all duration-300 placeholder:text-white/60"
+              className="w-full md:w-1/2 px-6 py-4 rounded-xl border border-white/20 bg-white/5 backdrop-blur-sm text-white text-sm md:text-base font-medium font-unbounded focus:outline-none focus:border-sky-500 transition-all placeholder:text-white/60"
             />
             <input
               type="email"
               placeholder="Email"
-              className="w-1/2 px-6 py-4 rounded-xl border border-white/20 bg-white/5 backdrop-blur-sm text-white text-base font-medium font-unbounded focus:outline-none focus:border-sky-500 focus:bg-white/10 transition-all duration-300 placeholder:text-white/60"
+              className="w-full md:w-1/2 px-6 py-4 rounded-xl border border-white/20 bg-white/5 backdrop-blur-sm text-white text-sm md:text-base font-medium font-unbounded focus:outline-none focus:border-sky-500 transition-all placeholder:text-white/60"
             />
           </div>
-          <div className="self-stretch flex justify-start items-start gap-7">
+          <div className="w-full">
             <textarea
               placeholder="Project Details..."
-              className="w-full h-40 px-6 py-4 rounded-xl border border-white/20 bg-white/5 backdrop-blur-sm text-white text-base font-medium font-unbounded focus:outline-none focus:border-sky-500 focus:bg-white/10 transition-all duration-300 placeholder:text-white/60 resize-none"
+              className="w-full h-40 px-6 py-4 rounded-xl border border-white/20 bg-white/5 backdrop-blur-sm text-white text-sm md:text-base font-medium font-unbounded focus:outline-none focus:border-sky-500 transition-all placeholder:text-white/60 resize-none"
             />
           </div>
-          <div className="self-stretch flex flex-col justify-center items-end gap-2.5">
-            <button className="w-56 px-7 py-4 bg-sky-500 hover:bg-sky-400 rounded-[80px] shadow-lg hover:shadow-sky-500/40 hover:scale-105 active:scale-95 transition-all duration-300 text-center text-white text-base font-bold font-unbounded">
+          <div className="flex justify-center md:justify-end">
+            <button className="w-full sm:w-56 px-7 py-4 bg-sky-500 hover:bg-sky-400 rounded-[80px] shadow-lg hover:shadow-sky-500/40 hover:scale-105 active:scale-95 transition-all duration-300 text-white text-base font-bold font-unbounded">
               Send
             </button>
           </div>
