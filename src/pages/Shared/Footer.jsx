@@ -4,7 +4,7 @@ import facebook from "../../assets/images/facebook2.svg";
 import instagram from "../../assets/images/instagram2.svg";
 import linkedin from "../../assets/images/linkedin2.svg";
 import behance from "../../assets/images/behance2.svg";
-import message from "../../assets/images/Message.svg";
+import message from "../../assets/images/message.svg";
 import call from "../../assets/images/call.svg";
 import location from "../../assets/images/location.svg";
 
